@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import {RiShareForwardLine} from 'react-icons/ri'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Profile Image Div */}
+      <div className="profile">
+      <div id="profile__img"></div>
+      <span className='share'><RiShareForwardLine /></span>
+      </div>
+      <h1>Adeleke Olukunle</h1>
+
+      <div className="links">
+      <a href="https://twitter.com/dat_leke" target="_blank" rel='noreferrer' id='twitter'>Twitter Link</a>
+      <a href="https://training.zuri.team/" target="_blank" rel='noreferrer' id='btn__zuri'>Zuri Team</a>
+      </div>
+      
     </div>
   );
 }
