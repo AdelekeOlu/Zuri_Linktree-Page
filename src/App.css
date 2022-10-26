@@ -41,6 +41,8 @@ h1{
   margin-bottom: 4rem;
 }
 
+/* links section */
+
 .links{
   display: grid;
   gap: 1rem;
@@ -141,4 +143,26 @@ h1{
   padding: 24px;
   border-radius: 8px;
   width: calc(80%);
+}
+
+/* socials section */
+.socials{
+  margin: auto;
+  margin-top: 2rem;
+  display: flex;
+  width: 50%;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.stackimg{
+  display: flex;
+  width: 19.45px;
+  height: 19.45px;
+  background-image: url(../public/slack.png);
+}
+span{
+  display: flex;
+  font-size: 24px;
+  color: black;
 }
