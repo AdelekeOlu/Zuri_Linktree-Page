@@ -22,9 +22,15 @@ function App() {
       </div>
 
       <div className='socials'>
-        <div className="stackimg"></div>
+        <a href="https://slack.com" target="_blank" rel='noreferrer' id='slack<Adeleke>'><div className="stackimg"></div></a>
       <a href="https://github.com/AdelekeOlu" target="_blank" rel='noreferrer' id='github'><span><BsGithub /></span></a>
       </div>
+
+      <footer>
+        <div className="zuriImg"></div>
+        <h3>HNG Internship 9 Frontend Task</h3>
+        <div className="igfImg"></div>
+      </footer>
       
     </div>
   );
