@@ -1,11 +1,11 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Contact from './pages/contact/Contact';
 import Home from './pages/home/Home';
 import '../src/pages/home/home.css'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
     <div className="App">
       <Routes>
         <Route path='/' element= {<Home />} />
@@ -18,7 +18,7 @@ function App() {
         <div className="igfImg"></div>
       </footer>
     </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
