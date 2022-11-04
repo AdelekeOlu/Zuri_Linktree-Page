@@ -144,6 +144,22 @@
     border-radius: 8px;
     width: calc(80%);
   }
+  #contact{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    font-style: medium;
+    color: #101828;
+    text-decoration: none;
+    background-color: #EAECF0;
+    padding: 24px;
+    border-radius: 8px;
+    width: calc(80%);
+  }
   
   /* socials section */
   .socials{
@@ -175,6 +191,7 @@
     width: 90%;
     padding-top: 1rem;
     flex-wrap: wrap;
+    margin-bottom: 1rem;
   }
   
   .zuriImg{
