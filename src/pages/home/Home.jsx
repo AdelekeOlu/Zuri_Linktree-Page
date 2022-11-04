@@ -21,7 +21,7 @@ const Home = () => {
       <a href="https://books.zuri.team/python-for-beginners?ref_id=<Adeleke Olukunle>" target="_blank" rel='noreferrer' id='book__python'>Python Books</a>
       <a href="https://background.zuri.team" target="_blank" rel='noreferrer' id='pitch'>Background Check for Coders</a>
       <a href="https://books.zuri.team/design-rules" target="_blank" rel='noreferrer' id='book__design'>Design Books</a>
-      <a href="/contact" id='contact'>Contact Me</a>
+      <a href="/Zuri_Linktree-Page/contact" id='contact'>Contact Me</a>
       </div>
 
       <div className='socials'>
