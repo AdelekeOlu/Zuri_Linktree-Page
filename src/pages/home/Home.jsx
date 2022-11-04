@@ -2,6 +2,7 @@ import React from 'react'
 import '../home/home.css'
 import {RiShareForwardLine} from 'react-icons/ri'
 import {BsGithub} from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 
 
 const Home = () => {
@@ -21,7 +22,7 @@ const Home = () => {
       <a href="https://books.zuri.team/python-for-beginners?ref_id=<Adeleke Olukunle>" target="_blank" rel='noreferrer' id='book__python'>Python Books</a>
       <a href="https://background.zuri.team" target="_blank" rel='noreferrer' id='pitch'>Background Check for Coders</a>
       <a href="https://books.zuri.team/design-rules" target="_blank" rel='noreferrer' id='book__design'>Design Books</a>
-      <a href="/Zuri_Linktree-Page/contact" id='contact'>Contact Me</a>
+      <Link to="/contact" id='contact'>Contact Me</Link>
       </div>
 
       <div className='socials'>
