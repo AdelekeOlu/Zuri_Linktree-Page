@@ -41,11 +41,11 @@
   justify-content: space-between;
   gap: 2rem;
   box-sizing: border-box;
-  width: 100%;
+  width: cal(100%);
 }
 .contact form .allnames .name {
-  flex-wrap: wrap;
   flex: 1;
+  flex-wrap: wrap;
 }
 .contact form .allnames label {
   font-family: Arial, Helvetica, sans-serif;
@@ -55,6 +55,7 @@
   color: #344054;
 }
 .contact form .allnames input {
+  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
