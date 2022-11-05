@@ -27,14 +27,14 @@ const Contact = () => {
             <p>Hi there, contact me to ask me about anything you have in mind.</p>
             </div>
 
-            <div className="names">
-                <div className="firstname">
+            <div className="allnames">
+                <div className="name">
                     <label>First name</label> <br />
                     <input type="text" name='' placeholder='Enter your first name' id='first_name' onChange={e=>setFirstName(e.target.value)}/>
                     {error&&firstName.length<=0?
                     <p className='error'>Please type in your name</p>:""}
                     </div>
-                <div className="lastname">
+                <div className="name">
                     <label>Last name</label> <br />
                     <input type="text" name='lastname' placeholder='Enter your last name' id='last_name' onChange={e=>setLastName(e.target.value)}/>
                     {error&&lastName.length<=0?
