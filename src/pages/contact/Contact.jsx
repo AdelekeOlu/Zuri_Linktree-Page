@@ -1,10 +1,23 @@
 import React from 'react'
+import { useState } from 'react';
 import '../contact/contact.scss'
 
 const Contact = () => {
-    function handleSubmit(e) {
+    const [firstName, setFirstName]=useState('');
+    const [lastName, setLastName]=useState('');
+    const [message, setMessage]=useState('');
+    const [email, setEmail]=useState('');
+    const [error, setError]=useState(false);
+    const [change, setChange] = useState(true);
+    function buttonHandler(){
+        setChange(!change);
+    }
+    let handleSubmit=(e)=> {
         e.preventDefault();
-        alert("Message Sent")
+        // alert("Message Sent");
+        if(firstName.length==0||message.length==0){
+            setError(true)
+        }
     }
   return (
     <div className="contact">
@@ -17,31 +30,41 @@ const Contact = () => {
             <div className="names">
                 <div className="firstname">
                     <label>First name</label> <br />
-                    <input type="text" placeholder='Enter your first name' id='first_name' required/>
+                    <input type="text" name='' placeholder='Enter your first name' id='first_name' onChange={e=>setFirstName(e.target.value)}/>
+                    {error&&firstName.length<=0?
+                    <p className='error'>Please type in your name</p>:""}
                     </div>
                 <div className="lastname">
                     <label>Last name</label> <br />
-                    <input type="text" placeholder='Enter your last name' id='last_name' required/>
+                    <input type="text" name='lastname' placeholder='Enter your last name' id='last_name' onChange={e=>setLastName(e.target.value)}/>
+                    {error&&lastName.length<=0?
+                    <p className='error'>Please type in your surname</p>:""}
                 </div>
             </div>
 
             <div className="allemail">
                 <label>Email</label>
-                <input type="email" placeholder='youremail@email.com' id='email' required/>
+                <input type="email" placeholder='youremail@email.com' id='email' 
+                onChange={e=>setEmail(e.target.value)}/>
+                {error&&email.length<=0?
+                <p className='error'>Please type in your email</p>:""}
             </div>
 
             <div className="allmessage">
                 <label>Message</label>
-                <textarea name="" id="message" cols="30" rows="10" placeholder='Send me a message and I will reply you as soon as possible...' required></textarea>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder='Send me a message and I will reply you as soon as possible...' onChange={e=>setMessage(e.target.value)}></textarea>
+                {error&&message.length<=0?
+                <p className='error'>Please enter a message</p>:""}
+                    
             </div>
 
             <div className="checkbox">
-                <input type="checkbox" required/> 
+                <input type="checkbox" onChange={buttonHandler}/> 
                 <p>You agree to providing your data to Adeleke who may contact you</p>
             </div>
 
             <div className="allbutton">
-            <button type='submit' id='btn__submit'>Send Message</button>
+            <button type='submit' disabled={change} id='btn__submit'>Send Message</button>
             </div>
         </form>
     </div>
