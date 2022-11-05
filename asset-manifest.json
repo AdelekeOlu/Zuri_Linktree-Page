@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Zuri_Linktree-Page/static/css/main.1b0aa151.css",
-    "main.js": "/Zuri_Linktree-Page/static/js/main.e196a7a6.js",
+    "main.css": "/Zuri_Linktree-Page/static/css/main.d20c0083.css",
+    "main.js": "/Zuri_Linktree-Page/static/js/main.e4195d7b.js",
     "static/js/787.8d0fca56.chunk.js": "/Zuri_Linktree-Page/static/js/787.8d0fca56.chunk.js",
     "index.html": "/Zuri_Linktree-Page/index.html",
-    "main.1b0aa151.css.map": "/Zuri_Linktree-Page/static/css/main.1b0aa151.css.map",
-    "main.e196a7a6.js.map": "/Zuri_Linktree-Page/static/js/main.e196a7a6.js.map",
+    "main.d20c0083.css.map": "/Zuri_Linktree-Page/static/css/main.d20c0083.css.map",
+    "main.e4195d7b.js.map": "/Zuri_Linktree-Page/static/js/main.e4195d7b.js.map",
     "787.8d0fca56.chunk.js.map": "/Zuri_Linktree-Page/static/js/787.8d0fca56.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b0aa151.css",
-    "static/js/main.e196a7a6.js"
+    "static/css/main.d20c0083.css",
+    "static/js/main.e4195d7b.js"
   ]
 }
