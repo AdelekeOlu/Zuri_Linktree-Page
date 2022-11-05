@@ -20,6 +20,11 @@ const Contact = () => {
                     <input type="text" placeholder='Enter your last name' id='last_name'/>
                 </div>
             </div>
+
+            <div className="allemail">
+                <label>Email</label>
+                <input type="email" placeholder='youremail@email.com' id='email'/>
+            </div>
         </form>
     </div>
   )
