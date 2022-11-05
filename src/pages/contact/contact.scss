@@ -36,26 +36,19 @@
                 color: #475467;
             }
         }
-        .names{
-            flex: 1;
+        .allnames{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             gap: 2rem;
-            width: calc(100%);
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100%;
     
-            .firstname{
-                display: flex;
-                flex-direction: column;
+            .name{
                 flex-wrap: wrap;
-                width: calc(47%);
-            }
-
-            .lastname{
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-                width: calc(47%);
+                flex: 1;
             }
     
             label{
@@ -210,5 +203,13 @@
             line-height: 20px;
             font-weight: 500;
         }
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .name{
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }

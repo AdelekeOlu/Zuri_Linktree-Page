@@ -35,34 +35,26 @@
   font-weight: 400;
   color: #475467;
 }
-.contact form .names {
-  flex: 1;
+.contact form .allnames {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 2rem;
+  box-sizing: border-box;
   width: 100%;
 }
-.contact form .names .firstname {
-  display: flex;
-  flex-direction: column;
+.contact form .allnames .name {
   flex-wrap: wrap;
-  width: 47%;
+  flex: 1;
 }
-.contact form .names .lastname {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 47%;
-}
-.contact form .names label {
+.contact form .allnames label {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
   color: #344054;
 }
-.contact form .names input {
+.contact form .allnames input {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -72,7 +64,7 @@
   border: 2px solid rgba(16, 24, 40, 0.05);
   padding-left: 1rem;
 }
-.contact form .names input:focus {
+.contact form .allnames input:focus {
   border: 2px solid #D1E9FF;
 }
 .contact form .allemail {
@@ -181,4 +173,11 @@
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 576px) {
+  .name {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }/*# sourceMappingURL=contact.css.map */
