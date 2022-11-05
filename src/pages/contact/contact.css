@@ -36,6 +36,7 @@
   color: #475467;
 }
 .contact form .names {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -63,7 +64,8 @@
 }
 .contact form .names input {
   display: flex;
-  width: 98%;
+  flex-wrap: wrap;
+  width: 100%;
   height: 40px;
   border-radius: 8px;
   outline: none;

@@ -37,6 +37,7 @@
             }
         }
         .names{
+            flex: 1;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -67,7 +68,8 @@
     
             input{
                 display: flex;
-                width: calc(98%);
+                flex-wrap: wrap;
+                width: calc(100%);
                 height: 40px;
                 border-radius: 8px;
                 outline: none;
