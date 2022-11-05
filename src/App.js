@@ -1,14 +1,14 @@
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Contact from './pages/contact/Contact';
 import Home from './pages/home/Home';
 import '../src/pages/home/home.css'
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
     <div className="App">
       <Routes>
-        <Route path='/' element= {<Home />} />
+        <Route path='/Zuri_Linktree-Page/' element= {<Home />} />
         <Route path='/contact' element= {<Contact />} />
       </Routes>
 
@@ -18,7 +18,7 @@ function App() {
         <div className="igfImg"></div>
       </footer>
     </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
