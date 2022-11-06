@@ -26,7 +26,7 @@
             p{
                 display: flex;
                 flex-wrap: wrap;
-                width: calc(50%);
+                flex: 1;
                 position: absolute;
                 margin-top: 5rem;
                 font-family: Arial, Helvetica, sans-serif;
@@ -37,21 +37,24 @@
             }
         }
         .allnames{
+            position: relative;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             gap: 2rem;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
             width: cal(100%);
+            // flex: 1;
     
             .name{
+                position: relative;
+                // width: calc(46%);
                 flex: 1;
                 flex-wrap: wrap;
             }
     
             label{
+                display: flex;
+                flex-wrap: wrap;
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 14px;
                 line-height: 20px;
@@ -60,7 +63,8 @@
             }
     
             input{
-                margin-top: 1rem;
+                // margin-top: 1rem;
+                flex: 1;
                 display: flex;
                 flex-wrap: wrap;
                 width: calc(100%);
@@ -208,7 +212,8 @@
 }
 
 @media only screen and (max-width:576px) {
-    .name{
+    .allnames{
+        flex-wrap: wrap;
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
