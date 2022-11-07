@@ -28,29 +28,29 @@ const Contact = () => {
         <form onSubmit={handleSubmit}>
             <div className="allnames">
                 <div className="name">
-                    <label>First name</label> <br />
-                    <input type="text" name='' placeholder='Enter your first name' id='first_name' onChange={e=>setFirstName(e.target.value)}/>
+                    <label for="first_name">First name</label> <br />
+                    <input type="text" name='first_name' placeholder='Enter your first name' id='first_name' onChange={e=>setFirstName(e.target.value)}/>
                     {error&&firstName.length<=0?
                     <p className='error'>Please type in your name</p>:""}
                     </div>
                 <div className="name">
-                    <label>Last name</label> <br />
-                    <input type="text" name='lastname' placeholder='Enter your last name' id='last_name' onChange={e=>setLastName(e.target.value)}/>
+                    <label for="last_name">Last name</label> <br />
+                    <input type="text" name='last_name' placeholder='Enter your last name' id='last_name' onChange={e=>setLastName(e.target.value)}/>
                     {error&&lastName.length<=0?
                     <p className='error'>Please type in your surname</p>:""}
                 </div>
             </div>
 
             <div className="allemail">
-                <label>Email</label>
-                <input type="email" placeholder='youremail@email.com' id='email' 
+                <label for="email">Email</label>
+                <input type="email" name='email' placeholder='youremail@email.com' id='email' 
                 onChange={e=>setEmail(e.target.value)}/>
                 {error&&email.length<=0?
                 <p className='error'>Please type in your email</p>:""}
             </div>
 
             <div className="allmessage">
-                <label>Message</label>
+                <label for="message">Message</label>
                 <textarea name="message" id="message" cols="30" rows="10" placeholder='Send me a message and I will reply you as soon as possible...' onChange={e=>setMessage(e.target.value)}></textarea>
                 {error&&message.length<=0?
                 <p className='error'>Please enter a message</p>:""}
@@ -58,7 +58,7 @@ const Contact = () => {
             </div>
 
             <div className="checkbox">
-                <input type="checkbox" onChange={buttonHandler}/> 
+                <input type="checkbox" name='checkbox' id='checkbox' onChange={buttonHandler}/> 
                 <p>You agree to providing your data to Adeleke who may contact you</p>
             </div>
 
