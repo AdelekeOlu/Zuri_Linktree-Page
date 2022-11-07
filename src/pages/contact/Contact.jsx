@@ -21,12 +21,11 @@ const Contact = () => {
     }
   return (
     <div className="contact">
-        <form onSubmit={handleSubmit}>
-            <div className='title'>
+        <div className='title'>
             <h1>Contact Me</h1>
             <p>Hi there, contact me to ask me about anything you have in mind.</p>
             </div>
-
+        <form onSubmit={handleSubmit}>
             <div className="allnames">
                 <div className="name">
                     <label>First name</label> <br />
