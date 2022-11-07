@@ -181,8 +181,14 @@
 
 @media only screen and (max-width: 576px) {
   .allnames {
-    flex-wrap: wrap;
-    flex: 0 0 100%;
-    max-width: 100%;
+    display: grid !important;
+    width: 100% !important;
+  }
+  .allnames .name {
+    flex-direction: column;
+  }
+  .allnames .name input {
+    display: flex !important;
+    flex: 1 !important;
   }
 }/*# sourceMappingURL=contact.css.map */

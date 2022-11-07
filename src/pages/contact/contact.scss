@@ -217,9 +217,20 @@
 
 @media only screen and (max-width:576px) {
     .allnames{
-        flex-wrap: wrap;
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
+        display: grid !important;
+        width: 100% !important;
+
+        .name{
+            // display: flex;
+            flex-direction: column;
+            // flex: 1 !important;
+            // width: 100% !important;
+
+            input{
+                display: flex !important;
+                // width: calc(100%) !important;
+                flex: 1 !important;
+            }
+        }
     }
 }
