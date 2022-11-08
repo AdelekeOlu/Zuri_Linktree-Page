@@ -1,73 +1,84 @@
-import React from 'react'
-import { useState } from 'react';
-import '../contact/contact.scss'
+import React, { useState } from "react";
+import "../contact/contact.css";
 
-const Contact = () => {
-    const [firstName, setFirstName]=useState('');
-    const [lastName, setLastName]=useState('');
-    const [message, setMessage]=useState('');
-    const [email, setEmail]=useState('');
-    const [error, setError]=useState(false);
-    const [change, setChange] = useState(true);
-    function buttonHandler(){
-        setChange(!change);
+function Contact() {
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (message.length == 0) {
+      setError(true);
+      console.log("Set message");
     }
-    let handleSubmit=(e)=> {
-        e.preventDefault();
-        // alert("Message Sent");
-        if(firstName.length==0||message.length==0){
-            setError(true)
-        }
-    }
+  };
   return (
-    <div className="contact">
-        <div className='title'>
-            <h1>Contact Me</h1>
-            <p>Hi there, contact me to ask me about anything you have in mind.</p>
-            </div>
-        <form onSubmit={handleSubmit}>
-            <div className="allnames">
-                <div className="name">
-                    <label for="first_name">First name</label> <br />
-                    <input type="text" name='first_name' placeholder='Enter your first name' id='first_name' onChange={e=>setFirstName(e.target.value)}/>
-                    {error&&firstName.length<=0?
-                    <p className='error'>Please type in your name</p>:""}
-                    </div>
-                <div className="name">
-                    <label for="last_name">Last name</label> <br />
-                    <input type="text" name='last_name' placeholder='Enter your last name' id='last_name' onChange={e=>setLastName(e.target.value)}/>
-                    {error&&lastName.length<=0?
-                    <p className='error'>Please type in your surname</p>:""}
+    <>
+      <div id="contact-me-container">
+        <div id="inner-container">
+          <div id="contact-header">
+            <h2 id="contact-me">Contact Me</h2>
+            <p id="contact-me-text">
+              Hi there, contact me to ask me about anything you have in mind
+            </p>
+          </div>
+          <div id="form-container">
+            <form onSubmit={handleSubmit}>
+              <div id="name-row" className="inputs">
+                <div id="first-name-container">
+                  <label htmlFor="first_name">First Name</label>
+                  <input type="text"
+                    id="first_name"
+                    placeholder="Enter your first name"
+                    required
+                  />
                 </div>
-            </div>
+                <div id="second-name-container">
+                  <label htmlFor="last_name">Last Name</label>
+                  <input
+                    id="last_name"
+                    placeholder="Enter your first name"
+                    required
+                  />
+                </div>
+              </div>
 
-            <div className="allemail">
-                <label for="email">Email</label>
-                <input type="email" name='email' placeholder='youremail@email.com' id='email' 
-                onChange={e=>setEmail(e.target.value)}/>
-                {error&&email.length<=0?
-                <p className='error'>Please type in your email</p>:""}
-            </div>
+              <div id="email-container" className="inputs">
+                <label htmlFor="email">Email</label>
+                <input id="email" type="email" placeholder="yourname@email.com" required />
+              </div>
 
-            <div className="allmessage">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" cols="30" rows="10" placeholder='Send me a message and I will reply you as soon as possible...' onChange={e=>setMessage(e.target.value)}></textarea>
-                {error&&message.length<=0?
-                <p className='error'>Please enter a message</p>:""}
-                    
-            </div>
+              <div id="message-textarea" className="inputs">
+                <label htmlFor="message">Message</label>
+                <textarea id="message"
+                  onChange={(e) => setMessage(e.target.value)}
+                  className={error ? "textarea-error" : ""}
+                  placeholder="send me a message"
+                />
+                {error && message.length <= 0 ? (
+                  <p>Please insert a message</p>
+                ) : (
+                  ""
+                )}
+              </div>
 
-            <div className="checkbox">
-                <input type="checkbox" name='checkbox' id='checkbox' onChange={buttonHandler}/> 
-                <p>You agree to providing your data to Adeleke who may contact you</p>
-            </div>
-
-            <div className="allbutton">
-            <button type='submit' disabled={change} id='btn__submit'>Send Message</button>
-            </div>
-        </form>
-    </div>
-  )
+              <div id="checkbox-area" className="inputs">
+                <input type="checkbox" id="checkbox" required />
+                <p>
+                  You agree to providing your data to Marv who may contact you
+                </p>
+              </div>
+              <div id="submit-btn-section" className="inputs">
+                <button type="submit" id="btn__submit">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default Contact
+export default Contact;
