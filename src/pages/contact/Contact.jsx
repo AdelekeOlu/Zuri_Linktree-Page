@@ -65,7 +65,7 @@ function Contact() {
               <div id="checkbox-area" className="inputs">
                 <input type="checkbox" id="checkbox" required />
                 <p>
-                  You agree to providing your data to Marv who may contact you
+                  You agree to providing your data to Adeleke who may contact you
                 </p>
               </div>
               <div id="submit-btn-section" className="inputs">
